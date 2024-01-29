@@ -22,5 +22,59 @@
         </ul>
     </nav>
    </header> 
+   <main>
+        <section>
+            <h2>Table</h2>
+            <table>
+                <caption>Student Information</caption>
+                <thead> 
+                    <th>Name</th>
+                    <th>ID Number</th>
+                    <th>Section</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rob K.</td>
+                        <td>001</td>
+                        <td>sec 3</td>
+                    </tr>
+                    <tr>
+                        <td>Phil Q.</td>
+                        <td>002</td>
+                        <td>sec 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Form</h2>
+            <form action="about.html" method="get">
+                <label for="firstname">First name</label>
+                <input id="firstname" type="text" name="fname">
+                <br>
+                <label for="quetsion">Question</label>
+                <textarea id="question" name="question"></textarea>
+                <br>
+                <label for="program">Which Program?</label>
+                <select id="program" name="program">
+                    <option value="imd">Int Med Design</option>
+                    <option value="gd" selected>Graphic Design</option>
+                    <option value="pn">Practical Nursing</option>
+                </select>
+                <br>
+                <label for="ottawa">Ottawa</label>
+                <input id="ottawa" type="checkbox" name="ott">
+                <label for="perth">Perth</label>
+                <input id="perth" type="checkbox" name="per">
+                <br>
+                <label for="one">1</label>
+                <input id="one" type="radio" name="fnumber" value="one">
+                <label for="two">2</label>
+                <input id="two" type="radio" name="fnumber" value="two">
+                <br>
+                <button type="submit">Send it!</button>
+            </form>
+        </section>
+   </main>
 </body>
 </html>
