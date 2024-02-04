@@ -4,6 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My very first web page.</title>
+    <style>
+        div.my_gallery {
+            margin: 10px;
+            margin-left: 20px;
+            border: cadetblue #ccc;
+            float: left;
+            width: 180px;
+        }
+        div.my_gallery:hover {
+            border: 1px solid #777;
+        }
+        div.my_gallery img {
+            width: 100%;
+            height: auto;
+        }
+        div.desc {
+            padding: 10px;
+            text-align: left;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            background-color: #76ccfd;
+            padding: 5px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        header,article {
+            margin-left: 20px;
+        }
+        div.notes {
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,15 +76,55 @@
         </article>
         <article>
             <h3 style="color: rgb(28, 154, 158);">My hobbies</h3>
+                <p>When I do not take pictures of animals, I take pictures of plants. So my favorite photos depict my hobbies:
+                </p>
             <ol>
                 <li>Flowers, plants, trees</li>
                 <li>Animals</li>
-                <li>I have more</li>
+                <li>Obviously, photography</li>
+                <li>Many more...</li>
             </ol>
-            <img src="images/Me_and_goats.jpg" alt="the image of me with goats">
-            <img src="images/Me_in_zoo.jpg" alt="I am washing my hands after petting animals">
+        <div class="my_gallery">
+            <a target="_blank" href="images/Me_and_goats.jpg">
+                <img src="images/Me_and_goats.jpg" alt="the image of me with goats" width="500" height="667">
+            </a>
+            <div class="desc">Covid times, I'm hanging out with goats.</div>
+        </div>
+        <div class="my_gallery">
+            <a target="_blank" href="images/Resting_goat.jpg">
+                <img src="images/Resting_goat.jpg" alt="resting goat" width="500" height="667">
+            </a>
+            <div class="desc">A chilling goat.</div>
+        </div>
+        <div class="my_gallery">
+            <a target="_blank" href="images/Cream_rose.jpg">
+                <img src="images/Cream_rose.jpg" alt="found beautiful roses" width="500" height="667">
+            </a>
+            <div class="desc">Found beautiful roses in someone's garden.</div>
+        </div>
+        <div class="my_gallery">
+            <a target="_blank" href="images/Butterfly_and_poppyseed.jpg">
+                <img src="images/Butterfly_and_poppyseed.jpg" alt="A moment, wnen a butterfly sat on a poppyseed" width="500" height="667">
+            </a>
+            <div class="desc">Butterfly rests on a poppyseed.</div>
+        </div>
+        <div class="my_gallery">
+            <a target="_blank" href="images/Like_a_milk_thistle.jpg">
+                <img src="images/Like_a_milk_thistle.jpg" alt="Humble-bee and the flower like a milkthistle" width="500" height="667">
+            </a>
+            <div class="desc">Humble-bee enjoys the flower.</div>
+        </div>
+        <div class="my_gallery">
+            <a target="_blank" href="images/Red_rose.jpg">
+                <img src="images/Red_rose.jpg" alt="Found a red" width="500" height="667">
+            </a>
+            <div class="desc">One more rose found in a garden. Lucky people.</div>
+        </div>
         </article>
     </main>
+    <div class="notes">
+        <a href="notes.html">Go to notes</a>
+    </div>
     <footer>
         &copy; Copyright Maria Volobueva
     </footer>
