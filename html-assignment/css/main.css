@@ -40,6 +40,13 @@ div.notes {
     padding: 20px;
 }
 
-article .about {
+article .about, .experience {
     color: crimson;
+}
+article .notes {
+    color: dodgerblue;
+}
+
+article .hobbies {
+    color: purple;
 }
