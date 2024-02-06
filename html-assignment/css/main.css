@@ -1,0 +1,45 @@
+div.my_gallery {
+    margin: 10px;
+    margin-left: 20px;
+    border: cadetblue #ccc;
+    float: left;
+    width: 180px;
+}
+div.my_gallery:hover {
+    border: 1px solid #777;
+}
+div.my_gallery img {
+    width: 100%;
+    height: auto;
+}
+div.desc {
+    padding: 10px;
+    text-align: left;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+footer {
+    background-color: #76ccfd;
+    padding: 5px;
+    text-align: center;
+    flex-shrink: 0;
+}
+header,article {
+    margin-left: 20px;
+}
+div.notes {
+    padding: 20px;
+}
+
+article .about {
+    color: crimson;
+}

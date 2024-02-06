@@ -4,49 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My very first web page.</title>
-    <style>
-        div.my_gallery {
-            margin: 10px;
-            margin-left: 20px;
-            border: cadetblue #ccc;
-            float: left;
-            width: 180px;
-        }
-        div.my_gallery:hover {
-            border: 1px solid #777;
-        }
-        div.my_gallery img {
-            width: 100%;
-            height: auto;
-        }
-        div.desc {
-            padding: 10px;
-            text-align: left;
-        }
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        main {
-            flex: 1;
-        }
-        footer {
-            background-color: #76ccfd;
-            padding: 5px;
-            text-align: center;
-            flex-shrink: 0;
-        }
-        header,article {
-            margin-left: 20px;
-        }
-        div.notes {
-            padding: 20px;
-        }
-    </style>
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -54,7 +12,7 @@
     </header>
     <main>
         <article>
-            <h3 style="color: slateblue;">About Me:</h3>
+            <h3 class="about">About Me:</h3>
             <p>So, I am an international student. I've arrived to Canada for the 1<sup>st</sup> time in my life this month.
                 Nature here reminds me my hometown: also very snowy, but not as cold as it is in Ontario.
                 I prefer a warmer climate, that is why my destination goal is European Union. 
@@ -64,7 +22,7 @@
             </p>
         </article>
         <article>
-            <h3 style="color:rgb(255, 105, 130);">My experience in Github, Web design:</h3>
+            <h3>My experience in Github, Web design:</h3>
             <p>My understanding of Github is very little, unfortunately. I only used <q>Brackets</q> a little bit long time ago.
                 The information must sit for awhile, settle down in my head.
                 I am doing my best not to freak out. Although it is nice to know how to make a web page from skretch.
@@ -75,7 +33,7 @@
             <blockquote><q>Do something today that your future self will thank you for.</q>-<cite>Unknown</cite></blockquote>
         </article>
         <article>
-            <h3 style="color: rgb(28, 154, 158);">My hobbies</h3>
+            <h3>My hobbies</h3>
                 <p>When I do not take pictures of animals, I take pictures of plants. So my favorite photos depict my hobbies:
                 </p>
             <ol>
