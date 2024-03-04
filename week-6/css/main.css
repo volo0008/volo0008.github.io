@@ -1,0 +1,39 @@
+
+
+/*set base value for rem*/
+html {
+    font-size: 20px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: brown;
+    background-image: url('../images/bread.jpg');
+    /*<img src="images/bread.jpg"> 12.02.2024 you can put this in HTML instead of background-image, if the image is more important.
+Because the image will push the text to the bottom, unless you do text positions-next class*/
+    background-repeat: no-repeat;
+    /*background-position: 100px 200px;*/
+    /*background-size: cover;*/
+    background-size: 100vh;
+    color: white;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    /*rem is always good, makes the text nice*/
+}
+
+h2 {
+    font-weight: normal;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+/*The best option for line-height is to use ratio- 1, 1.4, etc. But not pixels. If you use pixels, the font will overlap.*/
+/*By default: everything is in Times New Roman, 16 pt in browsers*/  
+
+/*<header> 32px
+    <h1>....</h1>64px
+    </header>*/

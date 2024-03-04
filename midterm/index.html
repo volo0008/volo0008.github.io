@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volo0008 midterm</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<!--IMPORTANT: I tried to use LESS class names, where it was possible, not to confuse the reader, I read the previous feedback-->
+<body>
+    <div class="container">
+        <!--this container keeps every section of the site aligned, including footer-->
+        <header>
+            <img src="images/lone-starfish-wide.jpg" alt="starfish">
+            <!--used span instead of h1, because by default h1 is smaller than needed, it's bigger on the mock.-->
+            <span>Lone Starfish</span>
+        </header>
+        <nav>
+            <!--this nav is without the list, it works. As it works in Navigation animation https://codepen.io/EvyatarDa/pen/waKXMd-->
+            <a class="home">HOME</a>
+            <a class="story">STORY</a>
+            <a class="contact">CONTACT</a>
+        </nav>
+        <main>
+            <article>
+                <h3>Life of a Starfish</h3>
+                <img src="images/lone-starfish.jpg" alt="starfish icon">
+                <p>Swallower catla Black angelfish grunter striped bass scissor-tail rasbora; slender mola. Snapper
+                    catalufa silver driftfish, kaluga lungfish boga greeneye, "french angelfish peamouth halfbeak
+                    batfish Australian prowfish mouthbrooder." Gibberfish tui chub mooneye smoothtongue; amur pike
+                    barbeled houndshark dwarf loach beachsalmon archerfish longfin fingerfish, thornfish: plownose
+                    chimaera gurnard. Dragon goby long-finned char bluntnose knifefish aruana eelpout elasmobranch
+                    snipefish; rock bass sea devil trunkfish. Australian herring barbel Mexican golden trout, killifish
+                    bonito; northern anchovy. Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River
+                    sucker, mojarra. Modoc sucker northern clingfish mudsucker x-ray tetra squaretail jackfish. Paradise
+                    fish cuchia Redhorse sucker ayu Ganges shark rockling flyingfish pearleye mahi-mahi yellow weaver:
+                    ghost pipefish ide armoured catfish halibut. Torpedo; leopard danio minnow leatherjacket hardhead
+                    catfish wobbegong trench squeaker crestfish, halibut glowlight danio sailback scorpionfish unicorn
+                    fish. Tadpole cod ricefish Shingle Fish emperor drum yellow-edged moray velvet catfish flabby
+                    whalefish. Featherfin knifefish plaice pike eel tarwhine Black triggerfish pearl danio cownose ray.
+                    Merluccid hake, platy peamouth humuhumunukunukuapua'a barred danio. Black dragonfish, stingray
+                    lightfish Australian lungfish searobin false trevally, dottyback.</p>
+            </article>
+            <section>
+                <h4>Facts About Starfish</h4>
+                <ul>
+                    <li>Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy. </li>
+                    <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
+                    <li>Herring barbel Mexican golden trout, killifish bonito; northern anchovy.
+                    </li>
+                    <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h4>Contact to learn more</h4>
+                <div class="main-form">
+                    <form action="index.html" method="get">
+                        <!--I kept "required" as it won't let the user submit the form without input.-->
+                        <label for="fullname">Your name</label><br>
+                        <input id="fullname" type="text" name="fullname" required><br>
+                        <label for="email">Your email</label><br>
+                        <input id="email" type="email" name="email" required><br>
+                        <label for="message">Your Message</label><br>
+                        <textarea id="message" required></textarea><br>
+                        <p>Would you like to visit the starfish?</p>
+                        <label for="yes">Yes</label>
+                        <input id="yes" type="radio" name="answer" value="yes">
+                        <label for="no">No</label>
+                        <input id="no" type="radio" name="answer" value="no">
+                        <label for="maybe">Maybe</label>
+                        <input id="maybe" type="radio" name="answer" value="maybe">
+                        <br>
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            &copy; Lone Starfish.
+        </footer>
+    </div>
+</body>
+
+</html>

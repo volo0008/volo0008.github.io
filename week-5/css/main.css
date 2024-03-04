@@ -1,0 +1,45 @@
+/* this is css comment */
+
+body {
+    background-color: cadetblue;
+    color: white;
+}
+h1, h2 {
+    color: darkslateblue;
+} 
+
+aside h2 {
+    color: aquamarine;
+}
+
+/* use period for classes */
+.services h2 {
+    color: bisque;
+}
+
+/* use a # for ID */
+#service-section h2 {
+    color: darkorchid;
+}
+
+aside p {
+    color: cornsilk;
+}
+
+.services p {
+    color: black;
+}
+
+.services .photos {
+    color: blue;
+}
+
+/* Calculating Specificity:
+Highest prioroty- !important(don't use it, you can't override it), #ID, class, tags(lowest priority)
+how many classes? 1) 5 (without punctuation in front: body, main, ul, li, a)
+body main.neato ul li.active .special a { ... }
+2)#products header.home#link p.advice li.active a { ... }
+Important- 0, #ID- 2, class- 3, tags- 4
+3) What is the specificity for line 7(h1, h2)?
+it is 0 0 0 1
+*/

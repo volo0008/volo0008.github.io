@@ -1,0 +1,151 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #aad4cf;
+}
+
+header {
+    position: relative;
+    display: inline-block;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    color: white;
+    font-size: 45px;
+    position: absolute;
+    bottom: 28%;
+    left: 38%;  
+}
+
+body .container {
+    /*this applies to the entire body, so the content inside will not exceed the width of the main image in header.
+    Value "0 auto" set the margin to 0 top, bottom; left,right will be automatically adjusted.*/
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: rgb(212,233,231);
+}
+
+body {
+    /*this margin is set to 0 as it seems in the mock*/ 
+    margin: 0;
+}
+
+nav {
+    /* flexbox in HTML & CSS Full Course - Beginner to Pro by SuperSimpledev, youtube*/
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    /* flexbox in HTML & CSS Full Course - Beginner to Pro by SuperSimpledev, youtube*/
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+nav .story {
+    /*grey borders are present on the mock before hover*/
+    border-right: rgb(173, 184, 196) solid 1px;
+    border-left: rgb(173, 184, 196) solid 1px;
+}
+
+/*on hover home, story, contact change border's color from grey to black as per mock*/
+/*IMPORTANT: due to the specific mock design, I couldn't use commas for nav, 
+as classes must have different properties, i.e. left or right borders*/
+nav .home:hover {
+    border-right: black solid 1.5px;
+}
+
+nav .story:hover {
+    border-right: black solid 1.5px;
+    border-left: black solid 1.5px;
+}
+
+nav .contact:hover {
+    border-left: black solid 1.5px;
+}
+
+main {
+    margin: 0px 12px;
+}
+
+article h3 {
+    margin: 12px 0px 12px 0px;
+    font-size: 25px;
+}
+
+article img {
+    width: 20%;
+    height: auto;
+    /* the image wraps around the text, when float is used*/
+    float: left;
+    margin: 0px 15px 15px 0px;
+}
+
+article p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+section h4 {
+    margin-bottom: 10px;
+}
+
+section p {
+    margin: 15px 0px 20px 0px;
+}
+section ul {
+    margin-top: 10px;
+    font-size: 15px;
+    /*as per mock, the line-height in the list is more condensed than in the main text in the article paragraph*/
+    line-height: 1;
+}
+
+.main-form {
+    border: solid 1px;
+    padding: 10px;
+}
+
+#fullname, #email {
+  width: 100%;
+  padding: 2px 2px;
+  margin: 8px 0;
+  /*by default box-sizing is set to content-box that ignores padding and borders.
+  In this case border-box must be used to include paddings and border-width. 
+  So, the object's dimension is calculated based on
+  outer border, NOT on content inside.*/
+  box-sizing: border-box;
+}
+
+#message {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+
+form label {
+    font-size: 18px;
+}
+
+.main-form button {
+    font-size: 12px;
+    padding: 10px;
+    /*applied margin-top 10px to "send" button to push it away from yes, no, maybe options*/
+    margin: 10px 0px 5px 0px;
+}
+
+footer {
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px;
+    text-align: right;
+}
