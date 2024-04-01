@@ -1,0 +1,74 @@
+h1 {
+    color: #900;
+}
+
+p {
+    color: blueviolet;
+    font-size: 2rem;
+}
+
+.box {
+    background-color: darkgrey;
+    height: 200px;
+}
+
+/*better not to set max-width, min-width is better*/
+@media screen and (min-width: 800px) {
+    .wrapper {
+        width: 800px;
+        margin: auto; /*will automatically center this wrapper*/
+    }
+
+    h1 {
+        color:darkcyan;
+    }
+    .box {
+        float: left;
+        width: 50%;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 1000px) {
+    .wrapper {
+        /*here no need to write margin auto again, cuz the earlier command is in effect
+        in @media screen and (min-width: 800px) */
+        width: 1000px;
+    }
+    .box {
+        width: 33%;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/*Mobile first! Progressive enhacement*/
+/*from 0 to 800px h1 will be darkcyan. Once the size is bigger than 800px, 
+it(h1) will become color: #900; as it is set on top.
+@media (max-width: 800px) {
+    h1 {
+        color:darkcyan;
+    }
+    .box {
+        float: left;
+        width: 50%;
+    }
+}
+*/
+
+/*if the page is bigger starting from 800px, h1 will be darkcyan
+    @media (min-width: 800px) {
+    h1 {
+        color:darkcyan;
+    }
+}
+*/

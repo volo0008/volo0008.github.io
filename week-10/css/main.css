@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*  *, means everything and*/
+
+body {
+    background-color: #CCC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 600px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.wrapper>div {
+    border-bottom: 1px solid #999;
+    padding: 1rem 0;
+}
+
+.box {
+    padding: 1rem;
+}
+
+.demo1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*wrap or nowrap*/
+    /*flex-direction: row-reverse; the row will move to right side*/
+    /*flex-direction: column; or column-reverse*/
+}
+
+.demo1 div {
+    /**/
+    width: 50%;
+}
+
+.wrapper>div>div:nth-child(1) {
+    /* one here means the first child*/
+    /*any direct children of wrapper*/
+    background-color: coral;
+}
+
+.wrapper>div>div:nth-child(2) {
+    /* one here means the first child*/
+    /*any direct children of wrapper*/
+    background-color: cadetblue;
+}
+
+.wrapper>div>div:nth-child(3) {
+    /* one here means the first child*/
+    /*any direct children of wrapper*/
+    background-color: goldenrod;
+}
+
+.wrapper>div>div:nth-child(4) {
+    /* one here means the first child*/
+    /*any direct children of wrapper*/
+    background-color: lightpink;
+}
+
+/*flex properties*/
+.demo1 {
+    display: flex;
+}
+
+.demo2 {
+    display: flex;
+    /*flex-direction: row-reverse;- we will see CBA, this order*/
+    /*justify-content: flex-end; or flex-start;*/
+    height: 200px;
+    /*justify main axis*/
+    justify-content: space-evenly;
+    /*justify-content: space-around; it automatically disributes A B C evenly, 
+    space-between;.*/
+    /*justify-content: center; - it will justify ABC in the center*/
+
+    /*align cross axis*/
+    align-items: flex-end;
+    /*justify-content: center;
+    aligh-items: center; - these two will justify ABC(nav) evenly on A axis and Y axis*/
+}
+
+/*flex-sizing*/
+.demo3 {
+    display: flex;
+}
+
+.demo2 div:nth-child(1) {
+    width: calc(50%-4px);
+}
+/*width: calc(50% - 2px); this is for homework*/
+
+.demo3 div:nth-child(1) {
+    flex-grow: 4;
+}
+
+.demo3 div:nth-child(2) {
+    flex-grow: 1;
+}
+
+/*flex basis*/
+.demo4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.demo4 div:nth-child(1) {
+    flex-basis: 200px; /* 200px along the axis, whether it is set to row or column*/
+}
+
+/*flex order!!!*/
+.demo5 {
+    display: flex;
+    /*flex-direction: row;*/
+}
+
+.demo5 div:nth-child(2) { /**/
+    order: 2;
+}
+
+.demo5 div:nth-child(4) {
+    order: 1;
+}
+/* ABCD all have  0 0 0 0. if we need B to be in the end we write order: 1, 
+if we need B to be in the end, we write order: 2. We give higher number, higher specificity */
+
+

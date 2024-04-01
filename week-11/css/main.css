@@ -1,0 +1,166 @@
+*,
+::after,
+::before {
+    box-sizing:border-box;
+}
+
+html {
+    font-size: 18px; 
+    /*rem will agjust sizes everywhere, if the client wants a bigger or 
+    smaller text sizes, because it relates to html. If in px, 
+    one has to do manually*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/*
+blockquote::before {
+    content: "dbl-quoute";
+} */
+
+/*we could have write .wrapper .demo1(it is more specific), but it would affect only demo1. 
+If we target > div, it will affect every direct children*/
+.wrapper > div { /*.wrapper > div - means the direct child, we target it*/
+    border-bottom: 1px dotted #000;
+    margin-bottom: 1rem; /*space after border*/
+    padding-bottom: 1rem; 
+}
+
+/*.wrapper . div::after {} something Lutfi asked*/
+.wrapper > div > div { /*it affects direct children of any demo with the name div*/
+    padding: 1rem;
+}
+
+.box:nth-child(1) {
+    background-color: coral;
+    grid-area: g1;
+}
+
+.box:nth-child(2) {
+    background-color: cadetblue;
+    grid-area: g2;
+}
+
+.box:nth-child(3) {
+    background-color: palevioletred;
+    grid-area: g3;
+}
+
+.box:nth-child(3) ul {
+    display: flex;
+    list-style: none;
+}
+
+.box:nth-child(4) {
+    background-color: cornflowerblue;
+    grid-area: g4;
+}
+
+.box:nth-child(5) {
+    background-color: darkslateblue;
+    grid-area: g5;
+    /*display: flex; OR we can do it with grid-->, but better not to use grid in grid, better flexboxes*/
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*we can use px, % and rem here too, not only 1fr*/
+    }
+
+.box:nth-child(6) {
+    background-color: darkgray;
+    grid-area: g6;
+}
+
+/*grid properties before adding two more boxes(5,6)
+
+.demo1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 1 column fraction and 1 more column fraction*/
+    /*we set the rules for box 1 and 2 explicitly, others will follow the rules, unless we say otherwise*/
+    /*OR grid-template-columns: 1fr 1fr 1fr; OR 1fr 2fr 1fr, anything*/
+
+/*.demo1 {
+    display: grid;
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); 2 means 2 columns
+}*/
+
+/*grid properties after adding two more boxes(5,6)*/
+
+.demo1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*was 1fr 1fr - in 2 colomns, now 3*/
+    /*The standard is 12 columns in designing website*/
+    /*grid-template-columns: repeat(3, 1fr)*/
+    /*gap: 1rem; adds space around the elements*/
+    grid-template-areas: 
+    "g1 g3 g3"
+    "g2 g2 g2"
+    "g4 g5 g5"
+    "g6 g6 g6"; /*we can do . . g6, but g6 . g6 won't work*/
+    /*"g1 g3 g3"
+    "g1 g2 g2"
+    "g1 g5 g5"
+    "g1 g6 g6"; - box one will take up the whole column*/
+
+}
+
+/*
+.demo1 .box:nth-child(1) {
+    grid-column: 1/3; /*or we can put 1; or 1/2; or 1/3;*/
+    /*to check grid-> inspect-> layout-> show grid overlays, show names, lines
+    grid-row: 1/3; the box 1 will grow to the size of 4 elements*/
+/*.demo1 .box:nth-child(2) {
+    grid-row: 1/ span 3; }/*not the best option with span like this
+.demo1 .box:nth-child(5) { 
+    grid-column: 2/4; }*/
+
+.demo2 {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /*OR 1fr 1fr 1fr*/
+    grid-template-areas: 
+    /*building a template*/
+    "hdr hdr hdr"
+    "nav nav events"
+    "coop coop events"
+    "footer footer footer";
+    /*". footer footer" - put a dot, it will take up 1 column, footer will be in the middle*/
+}
+
+.demo2 header {
+    grid-area: hdr; /*MEANS header*/
+}
+
+.demo2 nav {
+    grid-area: nav;
+}
+
+.demo2 .events {
+    grid-area: events;
+}
+
+.demo2 .coop {
+    grid-area: coop;
+}
+
+.demo2 footer {
+    grid-area: footer;
+}
+
+
+
+/*good semantics
+class vision, put a wrapper inside.
+a section of class team, put a wrapper inside- head at the top of it.
+put the content inside a parent and then create a wrapper inside.
+In html- first do one part, then validate it, then push to github.
+In header- needs bleeder, and wrapper inside.- for comment.
+body- clss wrapper in it
+
+*/
