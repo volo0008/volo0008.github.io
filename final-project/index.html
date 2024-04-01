@@ -25,11 +25,14 @@
                 <a class="contact">Contact</a>
             </nav>
            
+            <!--https://codepen.io/huange/pen/bGqMqM Simple search bar-->
             <div class="search">
-                <input type="text" placeholder="Search..." name="search">
+                <input type="text" placeholder="Search.." name="search">
                 <button type="submit" class="search-button">
                     <!--The magnifying glass icon might be bigger than a default size of the button, 
                     that is why it is not visible, I can't tell for sure without CSS-->
+                    <!--found the issue: the magnifying glass from fontawesome is visible only in REGULAR mode, not thin or sharp,
+                    so the code is right-->
                     <i class="fa-thin fa-magnifying-glass"></i>
                 </button>
             </div>
