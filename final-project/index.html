@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>volo0008 final project, part 1</title>
-    <link href="css/main.css" rel="stylesheet">
+    <!--I just added a CSS link here, but I haven't created a folder yet, as we didn't have to-->
+    <link href="css/main.css" rel="stylesheet"> 
+    <!--our new source of fonts and icons, as we needed to add icons for buttons-->
     <script src="https://kit.fontawesome.com/19b20a57a5.js" crossorigin="anonymous"></script>
 </head>
 
@@ -14,7 +16,7 @@
         <header>
             <img class="logo" src="images/logo.png" alt="logo with three stars">
             <nav>
-                <!--I assumed yellow color appears only, when one clicks on HOME, etc, so it is CSS, not a div-->
+                <!--I assumed yellow color appears only, when one clicks on HOME, etc, so it is done in CSS-->
                 <a class="home">Home</a>
                 <a class="about">About us</a>
                 <a class="services">Services</a>
@@ -23,10 +25,10 @@
             </nav>
             <!--search bar here-->
             <div class="search">
-                <input type="text" placeholder="Search.." name="search">
+                <input type="text" placeholder="Search..." name="search">
                 <button type="submit" class="search-button">
                     <!--The magnifying glass icon might be bigger than a default size of the button, 
-                    that is why it is not visible, can't tell for sure without CSS-->
+                    that is why it is not visible, I can't tell for sure without CSS-->
                     <i class="fa-thin fa-magnifying-glass"></i>
                 </button>
             </div>
@@ -44,6 +46,7 @@
                     tempora pariatur officiis, cumque voluptatem fuga eos.
                 </p>
                 <!--This will be a flexbox for a button with a link-->
+                <!--https://codepen.io/svinkle/pen/rNWdPB Using an Anchor as a Button-->
                 <div class="connect-button">
                     <a href="#" class="button" role="button">Connect with us</a>
                     <!--the triangle is taken from fontawesome-->
@@ -51,6 +54,7 @@
                 </div>
             </div>
         </section>
+
         <!--The following sections are basically very similar-->
         <section class="about">
             <div class="about-image">
@@ -68,7 +72,7 @@
         </section>
 
         <section class="services">
-            <!--This h1 goes before the image and should be separate by margin-->
+            <!--This h1 goes before the image and should be separated by margin-->
             <h1>Our Services</h1>
             <img src="images/digital.jpg" alt="our-services">
             <div class="digital">
@@ -138,7 +142,7 @@
 
         <section class="vision">
             <!--maybe here must be a wrapper, I cannot check cuz no CSS.
-            The image is stretched and there is text on top that is aligned.
+            The image is stretched and there is text on top that is aligned, has bleeds.
             Maybe it must be in CSS-->
             <img src="images/vision.jpg" alt="vision">
             <h2>Print</h2>
@@ -195,7 +199,7 @@
 
         <section class="map">
             <h2>Location</h2>
-            <!-- took the same code from the last class-->
+            <!-- Took the same code from the last class-->
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11215.777820627838!2d-75.7724351604492!3d45.34993349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1711373370676!5m2!1sen!2sca"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
