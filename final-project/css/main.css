@@ -414,3 +414,213 @@ nav li:hover a {
 .print-button i{
     color: white;
 }
+
+/*********************OUR VISION SECTION*******************/
+
+.vision {
+    position: relative;
+    overflow: hidden;/*overflow hidden hides the parts of the image which don't fit into this container*/
+}
+
+.vision-content {
+    width: 100%;
+    padding: 25px 15px 15px 15px;
+}
+.vision img {  /*I WANTED TO CUT THE BOATS IMAGE, but in Web version it looks different, so had to google the solution*/
+    position: absolute;
+    /*These two in combination will help us locate the center of the container*/
+    top: 50%;/*It will move the top left corner down 50% of the container*/
+    left: 50%;/*It will move the top left corner to the right of the container(50%)*/
+    /*This one will position the given image at the found center.*/
+    transform: translate(-50%, -50%); /*It will push the image to the left and up by 50% of the IMAGE SIZE*/
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.vision h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.vision p {
+    margin: 10px 0px 15px 0px;
+    font-size: 13px;
+    color: white;
+}
+
+.learn-button {
+    width: 200px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.267);
+    border: #c78c06 solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    
+}
+
+.learn-button a {
+    color: white;
+    text-decoration: none;
+}
+.learn-button i{
+    color: white;
+}
+
+/*********************OUR TEAM SECTION*******************/
+.team {
+    background-color: white;
+    display: flex;
+    flex-direction: column; /*added column, becuase it was row by the default*/
+}
+
+.team h1 {
+    margin: 35px 0px 15px 0px;
+    font-size: 35px;
+    color: black;
+}
+
+
+.john img {
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px;/*There was a gap between Image & h2, I dunno how to fix that in a proper way*/
+}
+
+.team-background {
+    background-color: #ffe6ac;
+    padding: 20px 15px 15px 15px;
+}
+
+.team-background h2 {
+    margin: 0px 0px 5px 0px;
+    font-size: 35px;
+}
+
+.team-background h3 {
+    margin: 0px 0px 5px 0px;
+    font-size: 20px;
+}
+
+.team-background hr {
+    border-color: #c78c06;
+    margin-bottom: 15px;
+}
+
+.team-background p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.bob img {
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px;/*There was a gap, I dunno how to fix that in a proper way*/
+}
+
+/*********************CONTACT US SECTION*******************/
+
+.contact-form h1 {
+    font-size: 35px;
+    margin-top: 35px;
+}
+
+.contact-form h3 {
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 3px;
+}
+
+#fullname, #email {
+  width: 100%;
+  padding: 5px 5px;
+  margin: 4px 0;
+  /*by default box-sizing is set to content-box that ignores padding and borders.
+  In this case border-box must be used to include paddings and border-width. 
+  So, the object's dimension is calculated based on
+  outer border, NOT on content inside.*/
+}
+
+#message {
+    width: 100%;
+    height: 150px;
+    padding: 5px 5px;
+    margin: 4px 0;
+}
+
+
+form label {
+    font-size: 13px;
+    margin: 0px 0px 50px 0px;
+}
+
+.contact-form button {
+    font-size: 20px;
+    padding: 3px;
+    margin: 10px 0px 5px 0px;
+    color:#c78c06;
+    background-color: #222;
+}
+
+/*********************HOURS SECTION*******************/
+.hours h1 {
+    margin: 15px 0px;
+}
+
+.hours table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours th {
+    font-weight: normal;
+    font-size: 13px;
+    background-color: #ffe6ac;
+    border: solid 1px black;
+    padding: 10px;
+}
+
+.hours td {
+    font-size: 13px;
+    border: solid 1px black;
+    padding: 10px
+}
+
+/*********************LOCATION SECTION*******************/
+
+.map h2 {
+    font-size: 25px;
+    margin: 20px 0px 12px 0px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 15px;
+}
+
+/*********************FOOTER SECTION*******************/
+
+footer {
+    background-color: #222;
+    color:#c78c06;
+    font-size: 13px;
+    padding: 15px;
+}
+
+footer h4:nth-child(1) {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 15px 0px 15px 0px;
+}
+
+footer span {
+    font-size: 13px;
+    margin: 15px 0px 0px 0px;
+}
+
+footer a {
+    color:#c78c06;
+}
