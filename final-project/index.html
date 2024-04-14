@@ -9,85 +9,88 @@
     <link href="css/main.css" rel="stylesheet">
     <!--our new source of fonts and icons, as we needed to add icons for buttons-->
     <script src="https://kit.fontawesome.com/19b20a57a5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!--I CREATED ONLY 1 WRAPPER, IT WAS REALLY HARD TO IMAGINE EVERYTHING WITHOUT CSS-->
-    <div class="wrapper">
-        <header>
+    <header>
+        <div class="yellow-header">
             <img class="logo" src="images/logo.png" alt="logo with three stars">
-            <nav>
-                <!--I assumed yellow color appears only, when one clicks on HOME, etc, so it is done in CSS-->
-                <a class="home">Home</a>
-                <a class="about">About us</a>
-                <a class="services">Services</a>
-                <a class="team">Team</a>
-                <a class="contact">Contact</a>
-            </nav>
-           
-            <!--https://codepen.io/huange/pen/bGqMqM Simple search bar-->
-            <div class="search">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit" class="search-button">
-                    <!--The magnifying glass icon might be bigger than a default size of the button, 
-                    that is why it is not visible, I can't tell for sure without CSS-->
-                    <!--found the issue: the magnifying glass from fontawesome is visible only in REGULAR mode, not thin or sharp,
-                    so the code is right-->
-                    <i class="fa-thin fa-magnifying-glass"></i>
-                </button>
-            </div>
-        </header>
+        </div>
 
-        <!--ALL the parts are'SECTIONS', but I might change those to simply DIVS.
+        <nav>
+            <!--I assumed yellow color appears only, when one clicks on HOME, etc, so it is done in CSS-->
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            <input class="search-bar" type="text" placeholder="Search" name="search">
+            <button class="search-button" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+    </header>
+
+    <!--ALL the parts are'SECTIONS', but I might change those to simply DIVS.
         I didn't want to use articles, main, aside here-->
-        <section class="Welcome">
-            <img class="main-banner" src="images/main-banner.jpg" alt="main-banner">
-            <div class="black-background"> <!--The opacity will be changed in CSS-->
-                <h1>
-                    Welcome to Three Star Media
-                </h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius voluptatem facere?
-                    Perspiciatis, illum ea laboriosam incidunt distinctio molestiae provident quidem eaque dolores
-                    tempora pariatur officiis, cumque voluptatem fuga eos.
-                </p>
-                <!--This will be a flexbox for a button with a link-->
-                <!--https://codepen.io/svinkle/pen/rNWdPB Using an Anchor as a Button-->
-                <div class="connect-button">
-                    <a href="#" class="button" role="button">Connect with us</a>
-                    <!--the triangle is taken from fontawesome-->
-                    <i class="fa-solid fa-play"></i>
-                </div>
-            </div>
-        </section>
-
-        <!--The following sections are basically very similar-->
-        <section class="about">
-            <div class="about-image">
-                <img src="images/about-us.jpg" alt="about-us">
-            </div>
-            <h1>About Us</h1>
-            <p>Something ipsum dolor sit amet consectetur adipisicing elit. Iste hic quae facere? Reiciendis tenetur
-                earum
-                ab sint impedit eaque quidem harum nemo qui, consectetur asperiores a. Id vel nam culpa!
-                <br>
-                <br>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consequatur error eaque
-                quas pariatur eos earum rerum cum laboriosam cupiditate. Totam iusto illum placeat, doloribus minus nam
-                labore optio?
+    <section class="welcome-section">
+        <img class="welcome-banner" src="images/main-banner.jpg" alt="main-banner">
+        <div class="black-block"> <!--The opacity will be changed in CSS-->
+            <h1>
+                Welcome to Three Star Media
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius voluptatem facere?
+                Perspiciatis, illum ea laboriosam incidunt distinctio molestiae provident quidem eaque dolores
+                tempora pariatur officiis, cumque voluptatem fuga eos.
             </p>
-        </section>
+            <!--This will be a flexbox for a button with a link-->
+            <!--https://codepen.io/svinkle/pen/rNWdPB Using an Anchor as a Button-->
+            <div class="connect-button">
+                <a href="#" class="button" role="button">Connect with us</a>
+                <!--the triangle is taken from fontawesome-->
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+    </section>
 
+    <!--The following sections are basically very similar-->
+    <section class="about-us">
+        <img src="images/about-us.jpg" alt="about-us">
+        <h1>About Us</h1>
+        <p>Something ipsum dolor sit amet consectetur adipisicing elit. Iste hic quae facere? Reiciendis tenetur
+            earum
+            ab sint impedit eaque quidem harum nemo qui, consectetur asperiores a. Id vel nam culpa!
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, aperiam consequatur error eaque
+            quas pariatur eos earum rerum cum laboriosam cupiditate. Totam iusto illum placeat, doloribus minus nam
+            labore optio?
+        </p>
+    </section>
+
+    <!--HERE A WRAPPER STARTS, because those sections:from Our services until Print have bleeds-->
+    <div class="wrapper">
         <section class="services">
-            <!--This h1 goes before the image and should be separated by margin-->
             <h1>Our Services</h1>
-            <img src="images/digital.jpg" alt="our-services">
-            <div class="digital">
+            <img class="services-img" src="images/digital.jpg" alt="our-services">
+            <div class="services-background">
                 <h3>Digital Transformation</h3>
-                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
+                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
+                    quos
+                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                    quo,
                     odit harum deleniti nobis!</p>
-                <!--This will be a flexbox for a button with a link-->
                 <div class="digital-button">
                     <a href="#" class="button" role="button">Digital plans</a>
                     <i class="fa-solid fa-play"></i>
@@ -97,62 +100,71 @@
 
         <section class="marketing">
             <img src="images/marketing.jpg" alt="marketing">
-            <h3>Digital Transformation</h3>
-            <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                odit harum deleniti nobis!</p>
-            <!--This will be a flexbox for a button with a link-->
-            <div class="markering-button">
-                <a href="#" class="button" role="button">Marketing Plans</a>
-                <i class="fa-solid fa-play"></i>
+            <div class="marketing-background">
+                <h3>Marketing</h3>
+                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
+                    quos
+                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                    quo,
+                    odit harum deleniti nobis!</p>
+                <!--This will be a flexbox for a button with a link-->
+                <div class="markering-button">
+                    <a href="#" class="button" role="button">Marketing Plans</a>
+                    <i class="fa-solid fa-play"></i>
+                </div>
             </div>
         </section>
 
         <section class="video">
             <img src="images/video.jpg" alt="video">
-            <h3>Video Production</h3>
-            <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                odit harum deleniti nobis!</p>
-            <!--This will be a flexbox for a button with a link-->
-            <div class="video-button">
-                <a href="#" class="button" role="button">Video Plans</a>
-                <i class="fa-solid fa-play"></i>
+            <div class="video-background">
+                <h3>Video Production</h3>
+                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
+                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
+                    odit harum deleniti nobis!</p>
+                <!--This will be a flexbox for a button with a link-->
+                <div class="video-button">
+                    <a href="#" class="button" role="button">Video Plans</a>
+                    <i class="fa-solid fa-play"></i>
+                </div>
             </div>
         </section>
 
         <section class="web">
             <img src="images/web.jpg" alt="web">
-            <h3>Web Development</h3>
-            <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                odit harum deleniti nobis!</p>
-            <!--This will be a flexbox for a button with a link-->
-            <div class="web-button">
-                <a href="#" class="button" role="button">Web Plans</a>
-                <i class="fa-solid fa-play"></i>
+            <div class="web-background">
+                <h3>Web Development</h3>
+                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
+                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
+                    odit harum deleniti nobis!</p>
+                <!--This will be a flexbox for a button with a link-->
+                <div class="web-button">
+                    <a href="#" class="button" role="button">Web Plans</a>
+                    <i class="fa-solid fa-play"></i>
+                </div>
             </div>
         </section>
 
         <section class="print">
             <img src="images/print.jpg" alt="print">
-            <h3>Print</h3>
-            <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                odit harum deleniti nobis!</p>
-            <!--This will be a flexbox for a button with a link-->
-            <div class="print-button">
-                <a href="#" class="button" role="button">Print Plans</a>
-                <i class="fa-solid fa-play"></i>
+            <div class="print-background">
+                <h3>Print</h3>
+                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
+                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
+                    odit harum deleniti nobis!</p>
+                <!--This will be a flexbox for a button with a link-->
+                <div class="print-button">
+                    <a href="#" class="button" role="button">Print Plans</a>
+                    <i class="fa-solid fa-play"></i>
+                </div>
             </div>
         </section>
+    </div>
 
-        <section class="vision">
-            <!--maybe here must be a wrapper, I cannot check cuz no CSS.
-            The image is stretched and there is a text on top that is aligned, has bleeds.
-            Maybe it must be in CSS-->
+    <section class="vision">
+        <div class="vision-content">
             <img src="images/vision.jpg" alt="vision">
-            <h2>Print</h2>
+            <h2>Our Vision</h2>
             <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
                 perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
                 odit harum deleniti nobis!</p>
@@ -160,29 +172,39 @@
                 <a href="#" class="button" role="button">Learn More</a>
                 <i class="fa-solid fa-play"></i>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <div class="wrapper">
         <section class="team">
             <h1>Our Team</h1>
-            <img src="images/john.jpg" alt="John">
             <div class="john">
-                <h2>John Doe</h2>
-                <h3>CEO and Co-owner</h3>
-                <!--I guess "hr" must be changed in CSS-->
-                <hr>
-                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                    odit harum deleniti nobis!</p>
+                <img src="images/john.jpg" alt="John Doe, CEO of the company">
+                <div class="team-background">
+                    <h2>John Doe</h2>
+                    <h3>CEO and Co-owner</h3>
+                    <!--I guess "hr" must be changed in CSS-->
+                    <hr>
+                    <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
+                        quos
+                        perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                        quo,
+                        odit harum deleniti nobis!</p>
+                </div>
             </div>
+            <br>
             <!--I will add margin here to devide 2 parts(John and Bob)-->
-            <div class="john">
+            <div class="bob">
                 <img src="images/bob.jpg" alt="Bob">
-                <h2>Bob Rite</h2>
-                <h3>CFO and Co-owner</h3>
-                <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                    odit harum deleniti nobis!</p>
+                <div class="team-background">
+                    <h2>Bob Rite</h2>
+                    <h3>CFO and Co-owner</h3>
+                    <hr>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
+                        perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                        quo,
+                        odit harum deleniti nobis!</p>
+                </div>
             </div>
         </section>
 
@@ -190,18 +212,35 @@
             <h1>Contact Us</h1>
             <h3>Send us a message</h3>
             <!--basically same form as in the midterm assignment-->
-            <div class="main-form">
-                <form action="index.html" method="get">
-                    <!--I kept "required" as it won't let the user submit the form without input.-->
-                    <label for="fullname">Full name</label><br>
-                    <input id="fullname" type="text" name="fullname" required><br>
-                    <label for="email">Your email</label><br>
-                    <input id="email" type="email" name="email" required><br>
-                    <label for="message">Your Message</label><br>
-                    <textarea id="message" required></textarea><br>
-                    <button type="submit">SEND</button>
-                </form>
-            </div>
+            <form action="index.html" method="get">
+                <!--I kept "required" as it won't let the user submit the form without input.-->
+                <label for="fullname">Full name</label><br>
+                <input id="fullname" type="text" name="fullname" required><br>
+                <label for="email">Email</label><br>
+                <input id="email" type="email" name="email" required><br>
+                <label for="message">Message</label><br>
+                <textarea id="message" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <!--This table must be with solid borders, will be added in CSS-->
+        <section class="hours">
+            <h1>Hours of operation</h1>
+            <table>
+                <tr>
+                    <th>Days</th>
+                    <th>Hours</th>
+                </tr>
+                <tr>
+                    <td>Monday - Friday</td>
+                    <td>9am - 6pm</td>
+                </tr>
+                <tr>
+                    <td>Saturday - Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </table>
         </section>
 
         <section class="map">
@@ -211,27 +250,14 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11215.777820627838!2d-75.7724351604492!3d45.34993349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1711373370676!5m2!1sen!2sca"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
-
-        <!--This table must be with solid borders, will be added in CSS-->
-        <table>
-            <tr>
-                <th>Days</th>
-                <th>Hours</th>
-            </tr>
-            <tr>
-                <td>Monday - Friday</td>
-                <td>9am - 6pm</td>
-            </tr>
-            <tr>
-                <td>Saturday - Sunday</td>
-                <td>Closed</td>
-            </tr>
-        </table>
-        <footer>
-            &copy; Copyright Three Star Media, 2020<br>
-            <span>All images are taken from Unsplash</span>
-        </footer>
     </div>
+    </div>
+
+    <footer>
+        <h4>&copy;Copyright Three Star Media, 2020</h4>
+        <span>All images are taken from <a href="https://unsplash.com/" target="blank">Unsplash</a></span>
+    </footer>
+
 </body>
 
 </html>
