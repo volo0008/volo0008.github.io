@@ -227,3 +227,190 @@ nav li:hover a {
 .digital-button i{
     color: white;
 }
+
+/*********************MARKETING SECTION*******************/
+.marketing {
+    background-color: #ffe6ac;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.marketing img {
+    width: 100%;
+    height: auto;
+}
+
+.marketing-background {
+    background-color: #ffe6ac;
+    padding: 20px 15px 15px 15px;
+}
+.marketing h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.marketing p {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+}
+
+.markering-button {
+    width: 200px;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+
+.markering-button a {
+    color: white;
+    text-decoration: none;
+}
+.markering-button i{
+    color: white;
+}
+
+/*********************VIDEO PRODUCTION SECTION*******************/
+
+.video {
+    background-color: #ffe6ac;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.video img {
+    width: 100%;
+    height: auto;
+}
+
+.video-background {
+    background-color: #ffe6ac;
+    padding: 20px 15px 15px 15px;
+}
+.video h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.video p {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+}
+
+.video-button {
+    width: 200px;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.video-button a {
+    color: white;
+    text-decoration: none;
+}
+.video-button i{
+    color: white;
+}
+
+/*********************WEB DEV SECTION*******************/
+
+.web {
+    background-color: #ffe6ac;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.web img {
+    width: 100%;
+    height: auto;
+}
+
+.web-background {
+    background-color: #ffe6ac;
+    padding: 20px 15px 15px 15px;
+}
+.webh3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.web p {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+}
+
+.web-button {
+    width: 200px;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.web-button a {
+    color: white;
+    text-decoration: none;
+}
+.web-button i{
+    color: white;
+}
+
+/*********************PRINT SECTION*******************/
+
+.print {
+    background-color: #ffe6ac;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.print img {
+    width: 100%;
+    height: auto;
+}
+
+.print-background {
+    background-color: #ffe6ac;
+    padding: 20px 15px 15px 15px;
+}
+.print h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.print p {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+}
+
+.print-button {
+    width: 200px;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.print-button a {
+    color: white;
+    text-decoration: none;
+}
+.print-button i{
+    color: white;
+}
