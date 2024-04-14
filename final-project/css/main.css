@@ -146,3 +146,84 @@ nav li:hover a {
     text-decoration: none;
     color: #222;
 }
+
+/*********************ABOUT US SECTION*******************/
+.about-us {
+    background-color:#ffe6ac;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about-us img{
+    margin: 15px;
+}
+
+.about-us p {
+    margin: 15px 15px 25px 15px;
+    font-size: 13px;
+}
+
+.about-us h1 {
+    font-size: 35px;
+    margin-left: 15px;
+}
+
+/*********************WRAPPER FOR BLEEDS*******************/
+
+.wrapper {
+    width: 96%;
+    margin: 0 auto;
+}
+
+/*********************OUR SERVICES SECTION*******************/
+.services {
+    background-color: white;
+    display: flex;
+    flex-direction: column; /*added column, becuase it was row by the default*/
+}
+
+.services h1 {
+    margin: 35px 0px 15px 0px;
+    font-size: 35px;
+    color: black;
+}
+
+
+.services-img {
+    width: 100%;
+    height: auto;
+}
+
+.services-background {
+    background-color: #ffe6ac;
+    padding: 20px 15px 15px 15px;
+}
+
+.services-background h3 {
+    margin: 0 0 15px 0;
+    font-size: 35px;
+}
+
+.services-background p {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+}
+
+.digital-button {
+    width: 200px;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 15px; /*added paddings to bring fa icon closer to the*/
+}
+
+.digital-button a {
+    color: white;
+    text-decoration: none;
+}
+.digital-button i{
+    color: white;
+}
