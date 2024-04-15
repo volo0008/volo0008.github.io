@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>volo0008 final project, part 1</title>
-    <!--I just added a CSS link here, but I haven't created a folder yet, as we didn't have to-->
     <link href="css/main.css" rel="stylesheet">
     <!--our new source of fonts and icons, as we needed to add icons for buttons-->
     <script src="https://kit.fontawesome.com/19b20a57a5.js" crossorigin="anonymous"></script>
@@ -16,15 +15,13 @@
 </head>
 
 <body>
-    <!--I CREATED ONLY 1 WRAPPER, IT WAS REALLY HARD TO IMAGINE EVERYTHING WITHOUT CSS-->
     <header>
         <div class="yellow-header">
             <img class="logo" src="images/logo.png" alt="logo with three stars">
         </div>
 
         <nav>
-            <!--I assumed yellow color appears only, when one clicks on HOME, etc, so it is done in CSS-->
-            <ul class="nav">
+            <ul class="nav-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Services</a></li>
@@ -46,19 +43,16 @@
     <section class="welcome-section">
         <img class="welcome-banner" src="images/main-banner.jpg" alt="main-banner">
         <div class="black-block"> <!--The opacity will be changed in CSS-->
-            <h1>
-                Welcome to Three Star Media
-            </h1>
+            <h1>Welcome to Three Star Media</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius voluptatem facere?
                 Perspiciatis, illum ea laboriosam incidunt distinctio molestiae provident quidem eaque dolores
                 tempora pariatur officiis, cumque voluptatem fuga eos.
             </p>
-            <!--This will be a flexbox for a button with a link-->
+
             <!--https://codepen.io/svinkle/pen/rNWdPB Using an Anchor as a Button-->
             <div class="connect-button">
                 <a href="#" class="button" role="button">Connect with us</a>
-                <!--the triangle is taken from fontawesome-->
                 <i class="fa-solid fa-play"></i>
             </div>
         </div>
@@ -81,85 +75,90 @@
 
     <!--HERE A WRAPPER STARTS, because those sections:from Our services until Print have bleeds-->
     <div class="wrapper">
-        <section class="services">
-            <h1>Our Services</h1>
-            <img class="services-img" src="images/digital.jpg" alt="our-services">
-            <div class="services-background">
-                <h3>Digital Transformation</h3>
-                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
-                    quos
-                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
-                    quo,
-                    odit harum deleniti nobis!</p>
-                <div class="digital-button">
-                    <a href="#" class="button" role="button">Digital plans</a>
-                    <i class="fa-solid fa-play"></i>
+        <h1>Our Services</h1>
+        <div class="grid-container">
+            <section class="services">
+                <img class="services-img" src="images/digital.jpg" alt="our-services">
+                <div class="services-background">
+                    <h3>Digital Transformation</h3>
+                    <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
+                        quos
+                        perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                        quo,
+                        odit harum deleniti nobis!</p>
+                    <div class="digital-button">
+                        <a href="#" class="button" role="button">Digital plans</a>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="marketing">
-            <img src="images/marketing.jpg" alt="marketing">
-            <div class="marketing-background">
-                <h3>Marketing</h3>
-                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
-                    quos
-                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
-                    quo,
-                    odit harum deleniti nobis!</p>
-                <!--This will be a flexbox for a button with a link-->
-                <div class="markering-button">
-                    <a href="#" class="button" role="button">Marketing Plans</a>
-                    <i class="fa-solid fa-play"></i>
+            <section class="marketing">
+                <img src="images/marketing.jpg" alt="marketing">
+                <div class="marketing-background">
+                    <h3>Marketing</h3>
+                    <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
+                        quos
+                        perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                        quo,
+                        odit harum deleniti nobis!</p>
+                    <div class="marketing-button">
+                        <a href="#" class="button" role="button">Marketing Plans</a>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="video">
-            <img src="images/video.jpg" alt="video">
-            <div class="video-background">
-                <h3>Video Production</h3>
-                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                    odit harum deleniti nobis!</p>
-                <!--This will be a flexbox for a button with a link-->
-                <div class="video-button">
-                    <a href="#" class="button" role="button">Video Plans</a>
-                    <i class="fa-solid fa-play"></i>
+            <section class="video">
+                <img src="images/video.jpg" alt="video">
+                <div class="video-background">
+                    <h3>Video Production</h3>
+                    <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
+                        quos
+                        perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                        quo,
+                        odit harum deleniti nobis!</p>
+                    <div class="video-button">
+                        <a href="#" class="button" role="button">Video Plans</a>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="web">
-            <img src="images/web.jpg" alt="web">
-            <div class="web-background">
-                <h3>Web Development</h3>
-                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                    odit harum deleniti nobis!</p>
-                <!--This will be a flexbox for a button with a link-->
-                <div class="web-button">
-                    <a href="#" class="button" role="button">Web Plans</a>
-                    <i class="fa-solid fa-play"></i>
+            <section class="web">
+                <img src="images/web.jpg" alt="web">
+                <div class="web-background">
+                    <h3>Web Development</h3>
+                    <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
+                        quos
+                        perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                        quo,
+                        odit harum deleniti nobis!</p>
+                    <div class="web-button">
+                        <a href="#" class="button" role="button">Web Plans</a>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="print">
-            <img src="images/print.jpg" alt="print">
-            <div class="print-background">
-                <h3>Print</h3>
-                <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci quos
-                    perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa quo,
-                    odit harum deleniti nobis!</p>
-                <!--This will be a flexbox for a button with a link-->
-                <div class="print-button">
-                    <a href="#" class="button" role="button">Print Plans</a>
-                    <i class="fa-solid fa-play"></i>
+            <section class="print">
+                <img src="images/print.jpg" alt="print">
+                <div class="print-background">
+                    <h3>Print</h3>
+                    <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
+                        quos
+                        perspiciatis, officiis alias? Nisi, quasi earum placeat consequatur, nam numquam enim rem culpa
+                        quo,
+                        odit harum deleniti nobis!</p>
+                    <div class="print-button">
+                        <a href="#" class="button" role="button">Print Plans</a>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
+
 
     <section class="vision">
         <div class="vision-content">
@@ -176,14 +175,15 @@
     </section>
 
     <div class="wrapper">
+        <h1>Our Team</h1>
         <section class="team">
-            <h1>Our Team</h1>
             <div class="john">
-                <img src="images/john.jpg" alt="John Doe, CEO of the company">
+                <div class="john-img">
+                    <img src="images/john.jpg" alt="John Doe, CEO of the company">
+                </div>
                 <div class="team-background">
                     <h2>John Doe</h2>
                     <h3>CEO and Co-owner</h3>
-                    <!--I guess "hr" must be changed in CSS-->
                     <hr>
                     <p>Something ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptatem adipisci
                         quos
@@ -192,10 +192,11 @@
                         odit harum deleniti nobis!</p>
                 </div>
             </div>
-            <br>
-            <!--I will add margin here to devide 2 parts(John and Bob)-->
+
             <div class="bob">
-                <img src="images/bob.jpg" alt="Bob">
+                <div class="bob-img">
+                    <img src="images/bob.jpg" alt="Bob">
+                </div>
                 <div class="team-background">
                     <h2>Bob Rite</h2>
                     <h3>CFO and Co-owner</h3>
@@ -208,49 +209,48 @@
             </div>
         </section>
 
-        <section class="contact-form">
-            <h1>Contact Us</h1>
-            <h3>Send us a message</h3>
-            <!--basically same form as in the midterm assignment-->
-            <form action="index.html" method="get">
-                <!--I kept "required" as it won't let the user submit the form without input.-->
-                <label for="fullname">Full name</label><br>
-                <input id="fullname" type="text" name="fullname" required><br>
-                <label for="email">Email</label><br>
-                <input id="email" type="email" name="email" required><br>
-                <label for="message">Message</label><br>
-                <textarea id="message" required></textarea><br>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+        <h1>Contact Us</h1>
+        <div class="aside-grid">
+            <section class="contact-form">
+                <h3>Send us a message</h3>
+                <!--basically same form as in the midterm assignment-->
+                <form action="index.html" method="get">
+                    <!--I kept "required" as it won't let the user submit the form without input.-->
+                    <label for="fullname">Full name</label><br>
+                    <input id="fullname" type="text" name="fullname" required><br>
+                    <label for="email">Email</label><br>
+                    <input id="email" type="email" name="email" required><br>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" required></textarea><br>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
 
-        <!--This table must be with solid borders, will be added in CSS-->
-        <section class="hours">
-            <h1>Hours of operation</h1>
-            <table>
-                <tr>
-                    <th>Days</th>
-                    <th>Hours</th>
-                </tr>
-                <tr>
-                    <td>Monday - Friday</td>
-                    <td>9am - 6pm</td>
-                </tr>
-                <tr>
-                    <td>Saturday - Sunday</td>
-                    <td>Closed</td>
-                </tr>
-            </table>
-        </section>
+            <section class="hours">
+                <h1>Hours of operation</h1>
+                <table>
+                    <tr>
+                        <th>Days</th>
+                        <th>Hours</th>
+                    </tr>
+                    <tr>
+                        <td>Monday - Friday</td>
+                        <td>9am - 6pm</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday - Sunday</td>
+                        <td>Closed</td>
+                    </tr>
+                </table>
+            </section>
 
-        <section class="map">
-            <h2>Location</h2>
-            <!-- Took the same code from the last class -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11215.777820627838!2d-75.7724351604492!3d45.34993349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1711373370676!5m2!1sen!2sca"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-    </div>
+            <section class="map">
+                <h2>Location</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11215.777820627838!2d-75.7724351604492!3d45.34993349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1711373370676!5m2!1sen!2sca"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </div>
     </div>
 
     <footer>

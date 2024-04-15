@@ -3,21 +3,21 @@
     padding: 0;
     margin: 0; 
     box-sizing: border-box;
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 body {
     max-width: 1200px;
+    margin: 0 auto; /*Float basic layout in imdac, the layout will be centered*/
 }
 
 .yellow-header {
     background-color: #c78c06;
     height: 180px;
-    position: absolute;
+    position: absolute; /*has fixed value*/
     top: 15px;
     left: 15px;
     right: 15px;
-    
 }
 
 .logo {
@@ -26,8 +26,7 @@ body {
 
 header {
     background-color: #222;
-    color: #c78c06;
-    position: relative;
+    position: relative; /*we can change this one, not like static*/
     width: 100%;
     height: 500px;
 }
@@ -43,6 +42,11 @@ nav {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+     /*transform traslate means we can move the item to sides or up, down*/
+    /*https://css-tricks.com/almanac/properties/t/transform/*/
+     /***works like this too***/
+    /* transform: translateZ(-50%);
+    transform: translateY(-50%); */
 }
 
 nav li:first-child a{
@@ -51,7 +55,7 @@ nav li:first-child a{
 
 .search {
     display: flex;
-    position: absolute;
+    position: absolute; 
     bottom: 15px;
     left: 15px;
     right: 15px;   
@@ -77,7 +81,7 @@ nav li:hover a {
     font-size: 20px;
 }
 
-/*HTML & CSS Full Course - Beginner to Pro- SuperSimpleDev, youtube*/
+/*HTML & CSS Full Course - Beginner to Pro- SuperSimpleDev, youtube, the search bar and button*/
 /*https://www.w3schools.com/cssref/tryit.php?filename=trycss3_placeholder select placeholder*/
 .search-bar::placeholder {
     font-family: Open-Sans, sans-serif;
@@ -104,11 +108,12 @@ nav li:hover a {
 }
 
 .welcome-banner {
-    z-index: -1;
-    position: absolute;
+    z-index: -1; /*This banner must stay behind the black-block(stacking order)- https://www.freecodecamp.org/news/css-z-index-not-working/*/
+    position: absolute; /* it is positioned relative to the parent*/
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /*it maintains the image ratio, but crops/hides some parts*/
+    /*https://css-tricks.com/almanac/properties/o/object-fit/*/
     }
 
 .black-block {
@@ -152,7 +157,6 @@ nav li:hover a {
     background-color:#ffe6ac;
     display: flex;
     flex-direction: column;
-
 }
 
 .about-us img{
@@ -178,14 +182,14 @@ nav li:hover a {
 
 /*********************OUR SERVICES SECTION*******************/
 .services {
-    background-color: white;
+    
     display: flex;
     flex-direction: column; /*added column, becuase it was row by the default*/
 }
 
 .services h1 {
     margin: 35px 0px 15px 0px;
-    font-size: 35px;
+    font-size: 30px;
     color: black;
 }
 
@@ -202,7 +206,7 @@ nav li:hover a {
 
 .services-background h3 {
     margin: 0 0 15px 0;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .services-background p {
@@ -224,13 +228,13 @@ nav li:hover a {
     color: white;
     text-decoration: none;
 }
+
 .digital-button i{
     color: white;
 }
 
 /*********************MARKETING SECTION*******************/
 .marketing {
-    background-color: #ffe6ac;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -246,8 +250,9 @@ nav li:hover a {
     background-color: #ffe6ac;
     padding: 20px 15px 15px 15px;
 }
+
 .marketing h3 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -256,28 +261,27 @@ nav li:hover a {
     font-size: 13px;
 }
 
-.markering-button {
+.marketing-button {
     width: 200px;
     height: 80px;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0 10px;
+    padding: 0 15px; /*added paddings to bring fa icon closer to the*/
 }
 
-.markering-button a {
+.marketing-button a {
     color: white;
     text-decoration: none;
 }
-.markering-button i{
+.marketing-button i{
     color: white;
 }
 
 /*********************VIDEO PRODUCTION SECTION*******************/
 
 .video {
-    background-color: #ffe6ac;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -294,7 +298,7 @@ nav li:hover a {
     padding: 20px 15px 15px 15px;
 }
 .video h3 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -324,7 +328,6 @@ nav li:hover a {
 /*********************WEB DEV SECTION*******************/
 
 .web {
-    background-color: #ffe6ac;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -340,8 +343,8 @@ nav li:hover a {
     background-color: #ffe6ac;
     padding: 20px 15px 15px 15px;
 }
-.webh3 {
-    font-size: 35px;
+.web h3 {
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -371,7 +374,6 @@ nav li:hover a {
 /*********************PRINT SECTION*******************/
 
 .print {
-    background-color: #ffe6ac;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -388,7 +390,7 @@ nav li:hover a {
     padding: 20px 15px 15px 15px;
 }
 .print h3 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -411,12 +413,14 @@ nav li:hover a {
     color: white;
     text-decoration: none;
 }
+
 .print-button i{
     color: white;
 }
 
 /*********************OUR VISION SECTION*******************/
 
+ /*I WANTED TO CUT THE BOATS IMAGE, but in Web version it looks different, so had to google the solution*/
 .vision {
     position: relative;
     overflow: hidden;/*overflow hidden hides the parts of the image which don't fit into this container*/
@@ -426,7 +430,7 @@ nav li:hover a {
     width: 100%;
     padding: 25px 15px 15px 15px;
 }
-.vision img {  /*I WANTED TO CUT THE BOATS IMAGE, but in Web version it looks different, so had to google the solution*/
+.vision img { 
     position: absolute;
     /*These two in combination will help us locate the center of the container*/
     top: 50%;/*It will move the top left corner down 50% of the container*/
@@ -435,7 +439,7 @@ nav li:hover a {
     transform: translate(-50%, -50%); /*It will push the image to the left and up by 50% of the IMAGE SIZE*/
     width: 100%;
     height: auto;
-    z-index: -1;
+    z-index: -1; /*brings it behind other items*/
 }
 
 .vision h2 {
@@ -458,7 +462,6 @@ nav li:hover a {
     align-items: center;
     justify-content: space-evenly;
     padding: 0 20px;
-    
 }
 
 .learn-button a {
@@ -482,11 +485,10 @@ nav li:hover a {
     color: black;
 }
 
-
 .john img {
     width: 100%;
     height: auto;
-    margin-bottom: -5px;/*There was a gap between Image & h2, I dunno how to fix that in a proper way*/
+    margin-bottom: -5px;/*There was a gap between Image & h2*/
 }
 
 .team-background {
@@ -517,7 +519,7 @@ nav li:hover a {
 .bob img {
     width: 100%;
     height: auto;
-    margin-bottom: -5px;/*There was a gap, I dunno how to fix that in a proper way*/
+    margin-bottom: -5px;/*There was a gap*/
 }
 
 /*********************CONTACT US SECTION*******************/
@@ -537,10 +539,6 @@ nav li:hover a {
   width: 100%;
   padding: 5px 5px;
   margin: 4px 0;
-  /*by default box-sizing is set to content-box that ignores padding and borders.
-  In this case border-box must be used to include paddings and border-width. 
-  So, the object's dimension is calculated based on
-  outer border, NOT on content inside.*/
 }
 
 #message {
@@ -623,4 +621,380 @@ footer span {
 
 footer a {
     color:#c78c06;
+}
+
+/***********************************MEDIA QUERIES********************************/
+
+@media only screen and (min-width: 760px) {
+
+    /******************HEADER****************/
+    header {
+        display: flex;
+        flex-direction: row;
+        padding: 30px 60px 30px 60px;
+        position: static;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .yellow-header {
+        position: static;
+        background-color: transparent;
+        /*had to hide the yellow background, had to make it the size of the logo too*/
+        /* display: none; left it just in case*/
+        height: 97px;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    nav {
+        display: flex;
+        position: static;
+        transform: none;
+        flex: 1;
+    }
+
+    nav ul li {
+        display: inline;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+        padding: 0px 20px;
+    }
+
+    nav li:first-child a {
+        color: black;
+        background-color: #c78c06;
+        padding: 10px 20px;
+    }
+
+    nav li:hover a {
+        color: white;
+    }
+
+    .search {
+        display: flex;
+        position: static;
+        font-size: 15px;
+    }
+
+    .search-bar {
+        flex: 1;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .search-bar::placeholder {
+        font-family: Open-Sans, sans-serif;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+
+    .search-button {
+        width: 35px;
+        height: 35px;
+        border: #c78c06 solid 1px;
+        background-color: #222
+    }
+
+    .search-button i {
+        color: #c78c06;
+        font-size: 20px;
+    }
+
+    /******************WELCOME SECTION****************/
+    .black-block {
+        margin: 5% 10%;
+        width: 100%;
+        padding: 0px 0px 10px 0px;
+    }
+
+    /******************ABOUT US SECTION****************/
+    .about-us {
+        display: block;
+        overflow: auto; 
+        padding: 15px 80px;
+    }
+
+    .about-us p {
+        margin-bottom: 10px;
+    }
+
+    .about-us img {
+        margin: 5px 12px;
+        width: 45%;
+        height: auto;
+        float: left;
+        /*just in case*/
+        /* display: inline-block; */
+    }
+
+    /******************WRAPPER SECTION****************/
+
+    /*These values are for 2 wrappers, for sections with bleeds*/
+    .wrapper {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    /******************GRID SECTION****************/
+    .grid-container {
+        display: grid;
+        grid-gap: 10px;
+        margin-bottom: 10px;
+        grid-template-columns: repeat(6, 1fr);
+        /* we have 6 columns, codepen assignment(https://codepen.io/volo0008/pen/XWQgXNR), field 9*/
+        grid-template-rows: repeat(2, 0.5fr); /*made lower items shorter*/
+        /*imdac material, grid container*/
+        grid-template-areas:
+            "dig dig dig mar mar mar"
+            "vid vid web web pri pri";
+    }
+
+    .grid-container>section:nth-child(1) {
+        grid-area: dig;
+    }
+
+    .grid-container>section:nth-child(2) {
+        grid-area: mar;
+    }
+
+    .grid-container>section:nth-child(3) {
+        grid-area: vid;
+    }
+
+    .grid-container>section:nth-child(4) {
+        grid-area: web;
+    }
+
+    .grid-container>section:nth-child(5) {
+        grid-area: pri;
+    }
+
+    /*-------------marketing button-----------------*/
+
+    .marketing {
+        background-color: #ffe6ac;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .marketing {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .marketing-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .marketing-background {
+        /*had to manually align inside items, no time to rename to target backround*/
+        display: flex;
+        background-color: #ffe6ac;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    .marketing-button a {
+        padding-right: 15px;
+    }
+
+    /*--------------digital button----------------*/
+
+    .digital-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .digital-button a {
+        padding-right: 15px;
+    }
+    
+    .services-background {
+        /*had to manually aligned inside items*/
+        display: flex;
+        background-color: #ffe6ac;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+    }
+    /*-------------video button-----------------*/
+
+    .video {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .video-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .video-button a {
+        padding-right: 15px;
+    }
+
+    .video-background {
+        /*had to manually aligned inside items*/
+        display: flex;
+        background-color: #ffe6ac;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    /*-------------web button-----------------*/
+    .web {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .web-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .web-button a {
+        padding-right: 15px;
+    }
+
+    .web h3 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .web-background {
+        /*had to manually aligned inside items*/
+        display: flex;
+        background-color: #ffe6ac;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        overflow-wrap: break-word;
+        word-break: normal;
+        /*I broke the word, it jumped out of the container after 760px, overflow hidden didn't look good*/
+    }
+
+    /*-------------print button-----------------*/
+
+    .print {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: relative;
+    }
+
+    .print-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .print-button a {
+        padding-right: 15px;
+    }
+
+    .print-background {
+        /*had to manually aligned inside items*/
+        display: flex;
+        background-color: #ffe6ac;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    /*-------------print button-----------------*/
+
+    .vision-content {
+        width: 100%;
+        padding: 25px 80px 15px 80px;
+    }
+
+    /******************TEAM SECTION****************/
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        /*added column, becuase it was row by the default*/
+    }
+
+    .john {
+        display: flex;
+    }
+
+    .john-img {
+        flex: 1;
+    }
+
+    .team-background {
+        padding: 0px;
+    }
+
+    .john .team-background {
+        flex: 1;
+    }
+
+    .team-background h2,
+    p,
+    hr {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .team-background h3 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .bob-img {
+        flex: 1;
+    }
+
+    .bob {
+        display: flex;
+    }
+
+    .bob .team-background {
+        flex: 1;
+        order: -1;
+    }
+
+    /******************HOURS,LOCATION SECTION****************/
+
+    .aside-grid {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 0.4fr);
+        /*https://codepen.io/IMD/pen/JjKVeXX*/
+        grid-template-areas:
+        "send loc"
+        "hours hours";
+        margin-bottom: 5px;
+    }
+
+    .aside-grid > section:nth-child(1) {
+        grid-area: send;
+    }
+
+    .aside-grid > section:nth-child(2) {
+        grid-area: hours;
+        height: 50%;
+    }
+
+    .aside-grid > section:nth-child(3) {
+        grid-area: loc;
+    }
 }
